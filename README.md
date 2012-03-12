@@ -13,11 +13,11 @@ What you can expect
 -------------------
 * small codebase (less than 800 lines, more than 450 lines of those within mpd.py).
 * simple and easily extendable web interface that features
-** viewing current status (current song, volume, status flags)
-** changing volume and status flags
-** viewing and editing current playlist, playing songs from the playlist
-** browsing and searching database
-** adding files and folders to the current playlist
+	* viewing current status (current song, volume, status flags)
+	* changing volume and status flags
+	* viewing and editing current playlist, playing songs from the playlist
+	* browsing and searching database
+	* adding files and folders to the current playlist
 * simple, standard compliant interface: no javascript, flash and alike, but proper html5 and css
 
 What you should not expect
