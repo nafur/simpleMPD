@@ -2,7 +2,7 @@
 # imports
 from mod_python import apache, util, Session
 import os, time
-apache_import = lambda mod: apache.import_module(mod, path=["/var/www/simpleUI/utilities/"])
+apache_import = lambda mod: apache.import_module(mod, path=["/var/www/simpleMPD/utilities/"])
 
 mmpd = apache_import("mpd")
 mpd = mmpd.MPDClient().connect("localhost", "6600")
@@ -29,16 +29,16 @@ status = mpd.status()
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>MPD - simpleUI</title>
+		<title>MPD - simpleMPD</title>
 		<link rel="stylesheet" type="text/css" href="static/std.css.py" />
 	</head>
 	<body>
 		<table style="width: 100%">
 			<tr>
-				<td class="box" width="50%">
+				<td class="box" style="width: 50%">
 					<%@	include file="status.py"%>
 				</td>
-				<td class="box" colspan="2" width="50%">
+				<td class="box" colspan="2" style="width: 50%">
 					<%@ include file="system.py"%>
 				</td>
 			</tr>
@@ -46,7 +46,7 @@ status = mpd.status()
 				<td class="box" colspan="2">
 					<%@	include file="playlist.py"%>
 				</td>
-				<td class="box" width="40%">
+				<td class="box" style="width: 40%">
 					<%@ include file="database.py"%>
 				</td>
 			</tr>

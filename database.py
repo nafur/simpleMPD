@@ -27,8 +27,8 @@ if dbmode == "search":
 %>
 	<tr>
 		<td><img src="static/file.png" alt="File" /></td>
-		<td width="100%"><a href="?action=add&amp;file=<%=item["file"]%>"><%=os.path.basename(item["file"])%> (<%=utils.formatTime(item["time"])%>)</a></td>
-		<td nowrap="nowrap">
+		<td style="width: 100%"><a href="?action=add&amp;file=<%=item["file"]%>"><%=os.path.basename(item["file"])%> (<%=utils.formatTime(item["time"])%>)</a></td>
+		<td style="white-space:nowrap;">
 			<a href="?action=add&amp;file=<%=item["file"]%>"><img class="mini" src="static/add.svg" alt="Add file" /></a>
 		</td>
 	</tr>
@@ -37,8 +37,8 @@ if dbmode == "search":
 %>
 	<tr>
 		<td><img src="static/directory.png" alt="Directory" /></td>
-		<td width="100%"><a href="?directory=<%=item["directory"]%>"><%=os.path.basename(item["directory"])%></a></td>
-		<td nowrap="nowrap">
+		<td style="width: 100%"><a href="?directory=<%=item["directory"]%>"><%=os.path.basename(item["directory"])%></a></td>
+		<td style="white-space:nowrap;">
 			<a href="?action=add&amp;file=<%=item["directory"]%>"><img class="mini" src="static/add.svg" alt="Add directory" /></a>
 		</td>
 	</tr>
@@ -69,8 +69,8 @@ else:
 %>
 	<tr>
 		<td><img src="static/file.png" alt="File" /></td>
-		<td width="100%"><a href="?action=add&amp;file=<%=item["file"]%>"><%=os.path.basename(item["file"])%> (<%=utils.formatTime(item["time"])%>)</a></td>
-		<td nowrap="nowrap">
+		<td style="width: 100%"><a href="?action=add&amp;file=<%=item["file"]%>"><%=os.path.basename(item["file"])%> (<%=utils.formatTime(item["time"])%>)</a></td>
+		<td style="white-space:nowrap;">
 			<a href="?action=add&amp;file=<%=item["file"]%>"><img class="mini" src="static/add.svg" alt="Add file" /></a>
 		</td>
 	</tr>
@@ -80,8 +80,8 @@ else:
 %>
 	<tr>
 		<td><img src="static/directory.png" alt="Directory" /></td>
-		<td width="100%"><a href="?directory=<%=item["directory"]%>"><%=os.path.basename(item["directory"])%></a></td>
-		<td nowrap="nowrap">
+		<td style="width: 100%"><a href="?directory=<%=item["directory"]%>"><%=os.path.basename(item["directory"])%></a></td>
+		<td style="white-space:nowrap;">
 			<a href="?action=add&amp;file=<%=item["directory"]%>"><img class="mini" src="static/add.svg" alt="Add directory" /></a>
 		</td>
 	</tr>
