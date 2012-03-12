@@ -37,7 +37,7 @@ pass
 </div>
 
 <div class="bottombox">
-next song:
+next:
 <%
 try:
 	req.write(utils.formatTrack(mpd.playlistid(status["nextsong"])[0]))
