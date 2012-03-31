@@ -23,6 +23,8 @@ if dbmode == "search":
 <table style="width: 100%">
 <%
 	for item in mpd.search("any",query):
+		if not "time" in item:
+			item["time"] = 0
 		if "file" in item:
 %>
 	<tr>
@@ -42,10 +44,11 @@ if dbmode == "search":
 			<a href="?action=add&amp;file=<%=item["directory"]%>"><img class="mini" src="static/add.svg" alt="Add directory" /></a>
 		</td>
 	</tr>
-</table>
-
 <%
 	pass
+%>
+</table>
+<%
 else:
 	# dbmode != "search"
 %>
@@ -85,10 +88,12 @@ else:
 			<a href="?action=add&amp;file=<%=item["directory"]%>"><img class="mini" src="static/add.svg" alt="Add directory" /></a>
 		</td>
 	</tr>
-</table>
 <%
 			pass
 		pass
 	pass
+%>
+</table>
+<%
 pass
 %>

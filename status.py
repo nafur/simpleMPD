@@ -4,7 +4,10 @@ playAction = ("play", "pause")[status["state"] == "play"]
 
 #req.write(str(mpd.playlistid(status["nextsong"])))
 
-(elapsed, time) = status["time"].split(":")
+if "time" in status:
+	(elapsed, time) = status["time"].split(":")
+else:
+	(elapsed, time) = (0, 0)
 %>
 <div class="volume">
 	<a href="?action=volumeup"><img class="icon" src="static/volumeup.svg" alt="Volume up" /></a><br />
