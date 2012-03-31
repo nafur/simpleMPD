@@ -5,4 +5,9 @@ def formatTime(time):
     return "%d:%02d" % ( minutes, seconds )
 
 def formatTrack(track):
-	return track["artist"] + " - " + track["title"]
+	if "artist" in track and "title" in track:
+		return track["artist"] + " - " + track["title"]
+	elif "file" in track:
+		return track["file"]
+	else:
+		return str(track)
